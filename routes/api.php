@@ -26,10 +26,20 @@ Route::group(['prefix' => 'posts'], function () {
     Route::get('/view/{id}', 'API\PostController@view');
 });
 
+Route::group(['prefix' => 'comments'], function () {
+    Route::get('/{post_id}', 'API\CommentController@index');
+});
+
 Route::group(['middleware' => 'auth:api'], function() {
     Route::group(['prefix' => 'posts'], function() {
         Route::post('/store', 'API\PostController@store');
         Route::post('/update', 'API\PostController@update');
         Route::delete('/delete/{id}', 'API\PostController@destroy');
+    });
+
+    Route::group(['prefix' => 'comments'], function() {
+        Route::post('/store', 'API\CommentController@store');
+        Route::post('/update', 'API\CommentController@update');
+        Route::delete('/delete/{id}', 'API\CommentController@destroy');
     });
 });

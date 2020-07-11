@@ -40,6 +40,20 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
+
+        $validator = \Validator::make($data, [
+            'title' =>'required',
+            'description' => 'required',
+            'category_id' => 'required',
+            'user_id' => 'required'
+        ]);
+
+        if($validator->fails()) {
+            return response()->json([
+                'message' => $validator->getMessageBag()->first()
+            ]);
+        }
+
         $post = $this->postRepository->store($data);
         return response()->json([
             'success' => true,
@@ -52,6 +66,20 @@ class PostController extends Controller
     public function update(Request $request)
     {
         $data = $request->all();
+
+        $validator = \Validator::make($data, [
+            'title' =>'required',
+            'description' => 'required',
+            'category_id' => 'required',
+            'user_id' => 'required'
+        ]);
+
+        if($validator->fails()) {
+            return response()->json([
+                'message' => $validator->getMessageBag()->first()
+            ]);
+        }
+
         $post = $this->postRepository->update($data);
         return response()->json([
             'success' => true,
