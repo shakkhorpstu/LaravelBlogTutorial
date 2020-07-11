@@ -20,3 +20,16 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('users/create', 'API\AuthController@store');
 Route::post('/users/login', 'API\AuthController@login');
+
+Route::group(['prefix' => 'posts'], function () {
+    Route::get('/', 'API\PostController@index');
+    Route::get('/view/{id}', 'API\PostController@view');
+});
+
+Route::group(['middleware' => 'auth:api'], function() {
+    Route::group(['prefix' => 'posts'], function() {
+        Route::post('/store', 'API\PostController@store');
+        Route::post('/update', 'API\PostController@update');
+        Route::delete('/delete/{id}', 'API\PostController@destroy');
+    });
+});
