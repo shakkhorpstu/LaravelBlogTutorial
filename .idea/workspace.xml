@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="69484bb3-6216-4c57-a1e5-4504aec8a3e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/PostComment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/PostComment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/PostLike.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/PostLike.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/PostRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/PostRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -191,7 +195,7 @@
       <workItem from="1594399773626" duration="499000" />
       <workItem from="1594444474226" duration="9684000" />
       <workItem from="1594473997928" duration="7419000" />
-      <workItem from="1594537649917" duration="3202000" />
+      <workItem from="1594537649917" duration="6220000" />
     </task>
     <servers />
   </component>
@@ -199,10 +203,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="193" width="441" height="367" key="NewPhpClassDialog" timestamp="1594540824431">
+    <state x="463" y="193" width="441" height="367" key="NewPhpClassDialog" timestamp="1594548571051">
       <screen x="0" y="27" width="1366" height="693" />
     </state>
-    <state x="463" y="193" width="441" height="367" key="NewPhpClassDialog/0.27.1366.693@0.27.1366.693" timestamp="1594540824431" />
+    <state x="463" y="193" width="441" height="367" key="NewPhpClassDialog/0.27.1366.693@0.27.1366.693" timestamp="1594548571051" />
     <state x="346" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1594483159397">
       <screen x="0" y="27" width="1366" height="693" />
     </state>

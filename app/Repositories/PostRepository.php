@@ -10,12 +10,16 @@ class PostRepository implements PostInterface
 {
     public function all()
     {
-        return Post::all();
+        return Post::orderBy('id', 'desc')
+            ->with(['category', 'user', 'comments', 'likes'])
+            ->get();
     }
 
     public function view($id)
     {
-        return Post::where('id', $id)->first();
+        return Post::with(['category', 'user', 'comments', 'likes'])
+            ->where('id', $id)
+            ->first();
     }
 
     public function store($data)

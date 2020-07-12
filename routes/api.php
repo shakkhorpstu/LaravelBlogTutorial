@@ -58,4 +58,12 @@ Route::group(['middleware' => 'auth:api'], function() {
     Route::group(['prefix' => 'likes'], function() {
         Route::post('/store', 'API\LikeController@store');
     });
+
+    // category routes
+    Route::group(['prefix' => 'categories'], function() {
+        Route::get('/', 'API\CategoryController@index');
+        Route::post('/store', 'API\CategoryController@store');
+        Route::post('/update', 'API\CategoryController@update');
+        Route::delete('/delete/{id}', 'API\CategoryController@destroy');
+    });
 });
