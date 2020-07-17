@@ -8,6 +8,8 @@ interface PostInterface
 {
     public function all();
 
+    public function searchPost($queryParams);
+
     public function view($id);
 
     public function store($data);

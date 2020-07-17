@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use App\Repositories\PostRepository;
 use Illuminate\Http\Request;
+use Auth;
 
 class PostController extends Controller
 {
@@ -17,7 +18,11 @@ class PostController extends Controller
     // all posts
     public function index()
     {
-        $posts = $this->postRepository->all();
+        if(request()->get('queryParams')) {
+            $posts = $this->postRepository->searchPost(request()->get('queryParams'));
+        } else {
+            $posts = $this->postRepository->all();
+        }
         return response()->json([
             'success' => true,
             'message' => 'Posts fetched successfully',
@@ -44,8 +49,7 @@ class PostController extends Controller
         $validator = \Validator::make($data, [
             'title' =>'required',
             'description' => 'required',
-            'category_id' => 'required',
-            'user_id' => 'required'
+            'category_id' => 'required'
         ]);
 
         if($validator->fails()) {
@@ -54,6 +58,7 @@ class PostController extends Controller
             ]);
         }
 
+        $data['user_id'] = Auth::id();
         $post = $this->postRepository->store($data);
         return response()->json([
             'success' => true,
@@ -70,8 +75,7 @@ class PostController extends Controller
         $validator = \Validator::make($data, [
             'title' =>'required',
             'description' => 'required',
-            'category_id' => 'required',
-            'user_id' => 'required'
+            'category_id' => 'required'
         ]);
 
         if($validator->fails()) {

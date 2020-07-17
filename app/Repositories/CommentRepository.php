@@ -5,6 +5,7 @@ namespace App\Repositories;
 
 use App\Interfaces\CommentInterface;
 use App\Models\PostComment;
+use Auth;
 
 class CommentRepository implements CommentInterface
 {
@@ -15,7 +16,8 @@ class CommentRepository implements CommentInterface
 
     public function store($data)
     {
-        return PostComment::create($data);
+        $comment = PostComment::create($data);
+        return $comment->setAttribute('user', Auth::user());
     }
 
     public function update($data)

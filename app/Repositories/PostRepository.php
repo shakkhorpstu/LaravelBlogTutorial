@@ -15,9 +15,23 @@ class PostRepository implements PostInterface
             ->get();
     }
 
+    public function searchPost($queryParams)
+    {
+        return Post::orderBy('id', 'desc')
+            ->where('title', 'Like', '%' . $queryParams . '%')
+            ->orWhereHas('category', function ($query) use($queryParams) {
+                $query->where('title', 'Like', '%' . $queryParams . '%');
+            })
+            ->orWhereHas('user', function ($query) use($queryParams) {
+                $query->where('name', 'Like', '%' . $queryParams . '%');
+            })
+            ->with(['category', 'user', 'comments', 'likes'])
+            ->get();
+    }
+
     public function view($id)
     {
-        return Post::with(['category', 'user', 'comments', 'likes'])
+        return Post::with(['category', 'user', 'comments.user', 'likes'])
             ->where('id', $id)
             ->first();
     }
