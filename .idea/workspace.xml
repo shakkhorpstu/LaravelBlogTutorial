@@ -2,27 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69484bb3-6216-4c57-a1e5-4504aec8a3e3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../blogfrontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../blogfrontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../blogfrontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../blogfrontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../blogfrontend/src/components/Navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../blogfrontend/src/components/Navbar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../blogfrontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../blogfrontend/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../blogfrontend/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../blogfrontend/src/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../blogfrontend/src/store/modules/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/../blogfrontend/src/store/modules/posts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogfrontend/src/components/post/Like.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../blogfrontend/src/components/post/Like.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../blogfrontend/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../blogfrontend/src/views/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../blogfrontend/src/views/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../blogfrontend/src/views/Login.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../blogfrontend/src/views/Posts/Create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../blogfrontend/src/views/Posts/Create.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../blogfrontend/src/views/Posts/Edit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../blogfrontend/src/views/Posts/Edit.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../blogfrontend/src/views/Posts/View.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../blogfrontend/src/views/Posts/View.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/laravelBlog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravelBlog.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/AuthController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Interfaces/PostInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Interfaces/PostInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/CommentRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/CommentRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/PostRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/PostRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +222,8 @@
       <workItem from="1594739206381" duration="12424000" />
       <workItem from="1594826874636" duration="6254000" />
       <workItem from="1594914457129" duration="6579000" />
-      <workItem from="1595000308242" duration="5930000" />
+      <workItem from="1595000308242" duration="6353000" />
+      <workItem from="1595049155074" duration="4707000" />
     </task>
     <servers />
   </component>
@@ -252,9 +239,9 @@
       <screen x="0" y="27" width="1366" height="693" />
     </state>
     <state x="463" y="193" width="441" height="367" key="NewPhpClassDialog/0.27.1366.693@0.27.1366.693" timestamp="1594548571051" />
-    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1595007767516">
+    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1595049918762">
       <screen x="0" y="27" width="1366" height="693" />
     </state>
-    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup/0.27.1366.693@0.27.1366.693" timestamp="1595007767516" />
+    <state x="346" y="41" width="672" height="678" key="search.everywhere.popup/0.27.1366.693@0.27.1366.693" timestamp="1595049918762" />
   </component>
 </project>

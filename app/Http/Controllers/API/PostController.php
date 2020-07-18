@@ -59,6 +59,30 @@ class PostController extends Controller
         }
 
         $data['user_id'] = Auth::id();
+
+        $img = $request->get('image');
+        if($img) {
+            $exploded =  explode(",", $img);
+
+            if (str_contains($exploded[0], 'gif')) {
+                $ext = 'gif';
+            } else if (str_contains($exploded[0], 'jpg')) {
+                $ext = 'jpg';
+            } else if (str_contains($exploded[0], 'png')) {
+                $ext = 'png';
+            } else if (str_contains($exploded[0], 'jpeg')) {
+                $ext = 'jpeg';
+            }
+
+            $decoded_data = base64_decode($exploded[1]);
+            $file_name = time() . "." . $ext;
+
+            $path = "posts/" . $file_name;
+            if (file_put_contents($path, $decoded_data)) {
+                $data['image'] = url('/') . '/'. $path;
+            }
+        }
+
         $post = $this->postRepository->store($data);
         return response()->json([
             'success' => true,
@@ -82,6 +106,29 @@ class PostController extends Controller
             return response()->json([
                 'message' => $validator->getMessageBag()->first()
             ]);
+        }
+
+        $img = $request->get('image');
+        if($img) {
+            $exploded =  explode(",", $img);
+
+            if (str_contains($exploded[0], 'gif')) {
+                $ext = 'gif';
+            } else if (str_contains($exploded[0], 'jpg')) {
+                $ext = 'jpg';
+            } else if (str_contains($exploded[0], 'png')) {
+                $ext = 'png';
+            } else if (str_contains($exploded[0], 'jpeg')) {
+                $ext = 'jpeg';
+            }
+
+            $decoded_data = base64_decode($exploded[1]);
+            $file_name = time() . "." . $ext;
+
+            $path = "posts/" . $file_name;
+            if (file_put_contents($path, $decoded_data)) {
+                $data['image'] = url('/') . '/'. $path;
+            }
         }
 
         $post = $this->postRepository->update($data);
